@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--
+  ~ @author     DCKAP
+  ~ @package    DCKAP_AdvancedSampleOrders
+  ~ @copyright  Copyright (c) 2016 DCKAP Inc (http://www.dckap.com)
+  ~ @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+  -->
+
+<config>
+	<type name="Magento\Checkout\Block\Cart\AbstractCart">
+		<plugin name="multiple-cart-delete" type="DCKAP\MultipleCartDelete\Plugin\AbstractCart" sortOrder="1" />
+	</type>
+	<preference for="Magento\Checkout\Controller\Cart\UpdatePost" type="DCKAP\MultipleCartDelete\Controller\Cart\UpdatePost" />
+</config>
